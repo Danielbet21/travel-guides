@@ -1,0 +1,123 @@
+```
+<style>
+  body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+  }
+  .header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .image-card {
+    margin: 20px;
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .image-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+  }
+  .image-card .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .image-card .recommendation {
+    font-size: 14px;
+    color: #666;
+  }
+  .map {
+    margin: 20px;
+    border: none;
+  }
+  .buttons {
+    margin-top: 20px;
+  }
+  .button {
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .approve-button {
+    background-color: #3e8e41;
+    color: #fff;
+  }
+  .reject-button {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  .button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .feedback-form {
+    margin-top: 20px;
+  }
+  .feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
+  }
+  .feedback-form button[type="submit"] {
+    background-color: #3e8e41;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+
+<h1 class="header">**Bahamas**</h1>
+
+<a href="https://www.google.com/maps/search/?api=1&query=Myrtos+Beach+Bahamas" target="_blank">
+  <div class="image-card">
+    <img src="https://images.unsplash.com/photo-1562036861-44811e0b4481?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDgwNTZ8MHwxfHNlYXJjaHwxfHxCYWhhbWFzfGVufDB8fHx8MTc0Njg4MDE5OXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Myrtos Beach">
+    <div class="title">Myrtos Beach</div>
+    <div class="recommendation">Visit this picturesque beach in Kefalonia, Greece, and enjoy the stunning turquoise waters and white pebbles.</div>
+  </div>
+</a>
+
+<a href="https://www.google.com/maps/search/?api=1&query=Santorini+Port+Bahamas" target="_blank">
+  <div class="image-card">
+    <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDgwNTZ8MHwxfHNlYXJjaHwyfHxCYWhhbWFzfGVufDB8fHx8MTc0Njg4MDE5OXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Santorini Port">
+    <div class="title">Santorini Port</div>
+    <div class="recommendation">Take a romantic stroll along the whitewashed houses and blue-domed churches in Santorini, Greece, and enjoy the breathtaking views of the caldera.</div>
+  </div>
+</a>
+
+<a href="https://www.google.com/maps/search/?api=1&query=(No+obvious+landmark)+Bahamas" target="_blank">
+  <div class="image-card">
+    <img src="https://images.unsplash.com/photo-1506125840744-167167210587?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDgwNTZ8MHwxfHNlYXJjaHwzfHxCYWhhbWFzfGVufDB8fHx8MTc0Njg4MDE5OXww&ixlib=rb-4.1.0&q=80&w=1080" alt="(No obvious landmark)">
+    <div class="title">(No obvious landmark)</div>
+    <div class="recommendation">Relax on the beautiful beaches of Mykonos, Greece, and enjoy the vibrant nightlife and delicious seafood.</div>
+  </div>
+</a>
+
+<img src="https://maps.googleapis.com/maps/api/staticmap?size=600x300&markers=Myrtos+Beach,Bahamas&markers=Santorini+Port,Bahamas&markers=(No+obvious+landmark),Bahamas&key=AIzaSyCYrJmI-6oJ65PFYEJqSjnrByK0J7jm7vM" alt="Map" class="map"></div>
+
+<div class="buttons">
+  <a href="http://localhost:5000/approve?id=recrvf0jWQyMdft6h" class="button approve-button">Approve</a>
+  <a href="http://localhost:5000/reject?id=recrvf0jWQyMdft6h" class="button reject-button">Reject</a>
+</div>
+
+<form action="http://localhost:5000/reject" method="post" class="feedback-form">
+  <input type="hidden" name="id" value="recrvf0jWQyMdft6h">
+  <textarea name="adjustment"></textarea>
+  <button type="submit">Submit Adjustments</button>
+</form>
+```
